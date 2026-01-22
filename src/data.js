@@ -6,11 +6,11 @@ export const TOP_CATEGORIES = [
 ];
 
 export const SIDEBAR_LINKS = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "Contact Us", href: "#" },
-  { label: "Professional Services", href: "#" },
-  { label: "Service Charges", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Professional Services", href: "/services" },
+  { label: "Service Charges", href: "/service-charges" },
   { label: "Project Notice", href: "#" },
   { label: "Corporate Tenders", href: "#" },
   { label: "Our Ethics", href: "#" },
