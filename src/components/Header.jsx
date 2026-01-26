@@ -7,7 +7,7 @@ export default function Header({ toggleSidebar }) {
   return (
     <>
       {/* Top Navbar */}
-      <motion.header 
+      <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm"
@@ -19,22 +19,24 @@ export default function Header({ toggleSidebar }) {
             </button>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-rose-700 to-rose-900 text-white flex items-center justify-center rounded-xl shadow-lg shadow-rose-500/20">
-                <span className="text-xl md:text-2xl font-black">HC</span>
+                <span className="text-xl md:text-2xl font-black">
+                  <img src="./images/HC logo.png" alt="" />
+                </span>
               </div>
               <div>
                 <h1 className="text-lg md:text-xl font-bold text-slate-900 tracking-tight leading-none">HC Parekh</h1>
-                <p className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider">Industrial Consultants</p>
+                <p className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider">Project Consultant & Investor</p>
               </div>
             </div>
           </div>
-          
+
           <div className="hidden md:flex items-center gap-4">
             <div className="bg-slate-100 px-4 py-1.5 rounded-full text-xs font-bold text-slate-600 flex items-center gap-2 border border-slate-200">
               <Award size={14} className="text-rose-600" />
               <span>Est. 2007</span>
             </div>
             <button className="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
-              Contact Us <ArrowRight size={14}/>
+              Contact Us <ArrowRight size={14} />
             </button>
           </div>
         </div>

@@ -11,16 +11,34 @@ export const SIDEBAR_LINKS = [
   { label: "Contact Us", href: "/contact" },
   { label: "Professional Services", href: "/services" },
   { label: "Service Charges", href: "/service-charges" },
-  { label: "Project Notice", href: "#" },
-  { label: "Corporate Tenders", href: "#" },
+  { label: "Project Notice", href: "/project-notice" },
+  { label: "Corporate Tenders", href: "/corporate-tenders" },
+  { label: "Corporate MOU", href: "/corporate-mou" },
   { label: "Our Ethics", href: "#" },
   { label: "Our Team", href: "#" }
 ];
 
 export const SLIDER_CONTENT = [
-  { title: "Trade Partnership", subtitle: "Implement Your Vision in India", desc: "End-to-end industrial setup and consultation." },
-  { title: "Expert Consultation", subtitle: "Strategic Industrial Solutions", desc: "Navigating complex corporate landscapes since 2007." },
-  { title: "Global Reach", subtitle: "Connecting Business to Future", desc: "Expanding horizons for local and international markets." }
+  {
+    title: "Experience in Government Sector",
+    subtitle: "NPCIL & BARC",
+    desc: "Experience in Nuclear Power Corporation of India Ltd and Radiological Laboratory of Bhabha Atomic Research Centre (Govt. of India)."
+  },
+  {
+    title: "Experience in Healthcare",
+    subtitle: "Government Hospital",
+    desc: "Experience in Hospital (Government of India)."
+  },
+  {
+    title: "Experience in Industries",
+    subtitle: "Textile, Plastic & Pulp",
+    desc: "Experience in Textile Industry, Plastic Manufacturing Industry, and Pulp & Paper Industry."
+  },
+  {
+    title: "Experience in Technology & FMCG",
+    subtitle: "IT & FMCG",
+    desc: "Experience in Information Technology and FMCG."
+  }
 ];
 
 export const NOTICES = [

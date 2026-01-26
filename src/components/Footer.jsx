@@ -10,9 +10,10 @@ export default function Footer() {
             <p className="text-slate-500 text-sm mt-2">Leading Industrial Consultants Since 2007</p>
           </div>
           <div className="flex gap-8 text-sm font-bold text-slate-600">
-            <a href="#" className="hover:text-rose-600">Privacy</a>
-            <a href="#" className="hover:text-rose-600">Terms</a>
-            <a href="#" className="hover:text-rose-600">Sitemap</a>
+            <a href="#" className="hover:text-rose-600">Our Hiring</a>
+            <a href="#" className="hover:text-rose-600">Our Trade Invitation</a>
+            <a href="#" className="hover:text-rose-600">Our Social Services & Donations</a>
+            <a href="#" className="hover:text-rose-600">Photo Gallery</a>
           </div>
         </div>
         <div className="border-t border-slate-100 mt-8 pt-8 text-center text-xs text-slate-400 font-medium">

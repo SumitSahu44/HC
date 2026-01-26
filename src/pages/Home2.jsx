@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components2/Navbar';
+// import Navbar from '../components2/Navbar';
 import Hero from '../components2/Hero';
 import StatsRow from '../components2/StatsRow';
 import LiveNotices from '../components2/LiveNotices';
@@ -9,14 +9,14 @@ import Footer from '../components/Footer'; // Pichla wala footer reuse kar lo
 export default function App() {
   return (
     <div className="font-sans antialiased text-slate-900 bg-white selection:bg-rose-500 selection:text-white">
-      <Navbar />
-      
+      {/* <Navbar /> */}
+
       <main>
         <Hero />
         <StatsRow />
         <LiveNotices />
         <ServiceShowcase />
-        
+
         {/* Call to Action Section */}
         <section className="py-24 bg-rose-600 text-white text-center">
           <div className="container mx-auto px-6">

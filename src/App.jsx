@@ -10,6 +10,10 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import ServiceCharges from './pages/ServiceCharges';
+import ProjectNotice from './pages/ProjectNotice';
+import CorporateTenders from './pages/CorporateTenders';
+import CorporateMOU from './pages/CorporateMOU';
+
 
 export default function App() {
   return (
@@ -29,6 +33,9 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
           <Route path="/service-charges" element={<ServiceCharges />} />
+          <Route path="/project-notice" element={<ProjectNotice />} />
+          <Route path="/corporate-tenders" element={<CorporateTenders />} />
+          <Route path="/corporate-mou" element={<CorporateMOU />} />
           <Route path="/home2" element={<HomeV2 />} />
           <Route path="/home3" element={<HomeV3 />} />
           <Route path="/home4" element={<HomeV4 />} />
