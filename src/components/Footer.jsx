@@ -14,7 +14,7 @@ export default function Footer() {
             <Link to="/our-hiring" className="hover:text-rose-600">Our Hiring</Link>
             <Link to="/corporate-tenders" className="hover:text-rose-600">Our Trade Invitation</Link>
             <Link to="/social-services" className="hover:text-rose-600">Our Social Services & Donations</Link>
-            <a href="#" className="hover:text-rose-600">Photo Gallery</a>
+            <Link to="/photo-gallery" className="hover:text-rose-600">Photo Gallery</Link>
           </div>
         </div>
         <div className="border-t border-slate-100 mt-8 pt-8 text-center text-xs text-slate-400 font-medium">

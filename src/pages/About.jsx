@@ -103,6 +103,34 @@ const CONTENT = {
             </div>
         </div>
     ),
+    ethics: (
+        <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-slate-800 border-b pb-4 border-slate-200">Our Professional Ethics & Commitment</h3>
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                <div className="flex items-start gap-4 mb-6">
+                    <div className="p-3 bg-emerald-100 text-emerald-600 rounded-xl">
+                        <ShieldCheck size={28} />
+                    </div>
+                    <div>
+                        <p className="text-lg text-slate-700 leading-relaxed mb-4">
+                            We take utmost care binding to provide services to our valued Clients with our
+                            <span className="font-bold text-slate-900"> professional commitments</span>, strictly adhering our set professional ethics, maintaining business and trade secrecy.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                    <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-rose-500" />
+                        Collaboration Protocol
+                    </h4>
+                    <p className="text-slate-600 leading-relaxed">
+                        We always prefer <span className="font-semibold text-slate-800">In-person or Face-to-Face Meeting</span> with the Companies or Agencies before entering into the business tie-up and collaboration with them to avoid any further trade dispute or litigation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    ),
     social: (
         <div className="space-y-6">
             <h3 className="text-2xl font-bold text-slate-800 border-b pb-4 border-slate-200">Social Contributions</h3>

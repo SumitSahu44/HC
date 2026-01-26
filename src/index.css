@@ -3,6 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@theme {
+  --color-rose-50: #fdf2f2;
+  --color-rose-100: #fde8e8;
+  --color-rose-200: #fbd5d5;
+  --color-rose-300: #f8b4b4;
+  --color-rose-400: #f98080;
+  --color-rose-500: #a91d23;
+  --color-rose-600: #8a161b;
+  --color-rose-700: #4e1118;
+  --color-rose-800: #3b0d12;
+  --color-rose-900: #2a090d;
+}
+
 /* Custom Scrollbar for better UI */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
