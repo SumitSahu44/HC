@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { SLIDER_CONTENT } from '../data';
@@ -15,9 +16,9 @@ export default function Hero() {
     <div className="relative w-full h-[450px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl shadow-slate-200 group">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-slate-900">
-        <img 
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069" 
-          alt="Office" 
+        <img
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069"
+          alt="Office"
           className="w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-[2s]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
@@ -42,12 +43,12 @@ export default function Hero() {
               {SLIDER_CONTENT[index].desc}
             </p>
             <div className="flex flex-wrap gap-4">
-               <button className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3.5 rounded-full font-bold transition-all flex items-center gap-2 shadow-lg shadow-rose-900/50">
-                 Explore Services <ArrowRight size={18} />
-               </button>
-               <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-3.5 rounded-full font-bold backdrop-blur-md transition-all border border-white/10">
-                 View Projects
-               </button>
+              <Link to="/services" className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3.5 rounded-full font-bold transition-all flex items-center gap-2 shadow-lg shadow-rose-900/50">
+                Explore Services <ArrowRight size={18} />
+              </Link>
+              <Link to="/photo-gallery" className="bg-white/10 hover:bg-white/20 text-white px-8 py-3.5 rounded-full font-bold backdrop-blur-md transition-all border border-white/10">
+                View Projects
+              </Link>
             </div>
           </motion.div>
         </AnimatePresence>

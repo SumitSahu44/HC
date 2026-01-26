@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, Award, ArrowRight } from 'lucide-react';
 import { TOP_CATEGORIES } from '../data';
@@ -35,9 +36,9 @@ export default function Header({ toggleSidebar }) {
               <Award size={14} className="text-rose-600" />
               <span>Est. 2007</span>
             </div>
-            <button className="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
+            <Link to="/contact" className="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
               Contact Us <ArrowRight size={14} />
-            </button>
+            </Link>
           </div>
         </div>
       </motion.header>

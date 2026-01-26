@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
@@ -83,9 +84,9 @@ export default function SocialServices() {
                             <div className="bg-slate-900 text-white p-8 rounded-2xl text-center">
                                 <h3 className="text-xl font-bold mb-2">Submit Your Proposal</h3>
                                 <p className="text-slate-400 mb-6">Let's work together to make a difference.</p>
-                                <button className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-xl font-bold transition-colors">
+                                <Link to="/contact" className="inline-block bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-xl font-bold transition-colors">
                                     Contact Us
-                                </button>
+                                </Link>
                             </div>
 
                         </div>

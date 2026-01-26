@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
@@ -119,9 +120,9 @@ export default function CorporateMOU() {
                                     </p>
                                 </div>
                                 <div className='relative z-10'>
-                                    <button className="bg-white text-slate-900 hover:bg-slate-200 px-6 py-3 rounded-xl font-bold transition-colors shadow-lg">
+                                    <Link to="/contact" className="inline-block bg-white text-slate-900 hover:bg-slate-200 px-6 py-3 rounded-xl font-bold transition-colors shadow-lg">
                                         Contact for MOU
-                                    </button>
+                                    </Link>
                                 </div>
 
                                 {/* Decorative background */}

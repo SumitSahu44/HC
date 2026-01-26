@@ -114,7 +114,7 @@ export default function OurHiring() {
 
                                     <div className="flex flex-col md:flex-row items-center gap-4 bg-white text-slate-900 p-4 rounded-xl">
                                         <span className="font-bold text-sm uppercase tracking-wider text-slate-500">Send To:</span>
-                                        <span className="font-mono font-bold text-lg">hemant.parekh2012@gmail.com</span>
+                                        <a href="mailto:hemant.parekh2012@gmail.com" className="font-mono font-bold text-lg hover:text-purple-600 transition-colors">hemant.parekh2012@gmail.com</a>
                                     </div>
                                 </div>
 

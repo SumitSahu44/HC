@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
@@ -125,9 +126,9 @@ export default function ProjectNotice() {
                                     <p className="text-slate-300 leading-relaxed mb-6">
                                         Companies (other than OPC) that have prescribed different clear Price-Plans and Service-Plans may contact us “in-person” for a Face-To-Face Meeting at <strong className="text-white">Bhubaneswar / Bengaluru</strong>, with a prior appointment.
                                     </p>
-                                    <button className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-2.5 rounded-xl font-semibold transition-colors">
+                                    <Link to="/contact" className="inline-block bg-rose-600 hover:bg-rose-700 text-white px-6 py-2.5 rounded-xl font-semibold transition-colors">
                                         Book Appointment
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
 
