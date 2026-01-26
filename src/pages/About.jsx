@@ -3,13 +3,14 @@ import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
-import { User, BookOpen, Briefcase, Heart, ChevronRight, Award } from 'lucide-react';
+import { User, BookOpen, Briefcase, Heart, ChevronRight, Award, ShieldCheck } from 'lucide-react';
 
 const SECTIONS = [
     { id: 'personal', label: 'Personal Information', icon: User },
     { id: 'education', label: 'Educational Background', icon: BookOpen },
     { id: 'experience_govt', label: 'Govt. Experience', icon: Award },
     { id: 'experience_corp', label: 'Corporate Experience', icon: Briefcase },
+    { id: 'ethics', label: 'Professional Ethics', icon: ShieldCheck },
     { id: 'social', label: 'Social Services', icon: Heart },
 ];
 

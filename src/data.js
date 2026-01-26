@@ -15,7 +15,7 @@ export const SIDEBAR_LINKS = [
   { label: "Corporate Tenders", href: "/corporate-tenders" },
   { label: "Corporate MOU", href: "/corporate-mou" },
   { label: "Our Ethics", href: "#" },
-  { label: "Our Team", href: "#" }
+  { label: "Our Team", href: "/our-team" }
 ];
 
 export const SLIDER_CONTENT = [
