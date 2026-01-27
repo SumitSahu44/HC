@@ -6,6 +6,7 @@ import NoticeBoard from '../components/NoticeBoard';
 import Services from '../components/Services';
 import Footer from '../components/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Phone } from 'lucide-react';
 
 // Preloader Component
 const Preloader = ({ setLoading }) => {
@@ -73,7 +74,19 @@ export default function App() {
                 <div className="xl:col-span-2">
                   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
                     <Hero />
+
                   </motion.div>
+
+                    <div className="p-5 mt-auto">
+                            <div className="bg-slate-900 rounded-2xl p-4 text-white relative overflow-hidden">
+                              <div className="absolute top-0 right-0 w-24 h-24 bg-rose-500 blur-[40px] opacity-30" />
+                              <p className="text-xs text-slate-400 mb-1">Need Consultation?</p>
+                              <p className="font-bold text-lg mb-3">+91 98765 43210</p>
+                              <a href="tel:+919876543210" className="w-full bg-white/10 hover:bg-white/20 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors">
+                                <Phone size={14} /> Call Now
+                              </a>
+                            </div>
+                          </div>
                 </div>
                 <div className="xl:col-span-1 h-full">
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="h-full">

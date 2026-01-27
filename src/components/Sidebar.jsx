@@ -41,7 +41,7 @@ export default function Sidebar({ isOpen, toggle }) {
           ))}
         </div>
 
-        <div className="p-5 mt-auto">
+        {/* <div className="p-5 mt-auto">
           <div className="bg-slate-900 rounded-2xl p-4 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-24 h-24 bg-rose-500 blur-[40px] opacity-30" />
             <p className="text-xs text-slate-400 mb-1">Need Consultation?</p>
@@ -50,7 +50,7 @@ export default function Sidebar({ isOpen, toggle }) {
               <Phone size={14} /> Call Now
             </a>
           </div>
-        </div>
+        </div> */}
       </motion.aside>
     </>
   );

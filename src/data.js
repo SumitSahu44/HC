@@ -14,7 +14,7 @@ export const SIDEBAR_LINKS = [
   { label: "Project Notice", href: "/project-notice" },
   { label: "Corporate Tenders", href: "/corporate-tenders" },
   { label: "Corporate MOU", href: "/corporate-mou" },
-  { label: "Our Ethics", href: "#" },
+  { label: "Our Hiring", href: "/our-hiring" },
   { label: "Our Team", href: "/our-team" }
 ];
 
