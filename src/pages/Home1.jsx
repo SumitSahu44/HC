@@ -7,6 +7,7 @@ import Services from '../components/Services';
 import Footer from '../components/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Preloader Component
 const Preloader = ({ setLoading }) => {
@@ -92,8 +93,8 @@ export default function App() {
                       {/* New Bullet Points Section */}
                       <ul className="list-disc list-inside text-xs text-slate-300 mb-4 space-y-1 marker:text-rose-500">
                         <li className="font-bold text-lg mb-2 list-disc list-inside">Implement your own project</li>
-                        <li className="font-bold text-lg mb-2">Contact us for our Projects</li>
-                      </ul>
+                        <Link to="/contact" ><li className="font-bold text-lg mb-2">Contact us for our Projects</li>
+                        </Link></ul>
 
                       {/* <a href="tel:+919876543210" className="w-full bg-white/10 hover:bg-white/20 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors border border-white/5">
                         

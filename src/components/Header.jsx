@@ -18,19 +18,22 @@ export default function Header({ toggleSidebar }) {
             <button onClick={toggleSidebar} className="p-2 hover:bg-gray-100 rounded-lg lg:hidden text-slate-700 transition-colors">
               <Menu size={24} />
             </button>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 md:w-12 md:h-12 text-white flex items-center justify-center rounded-xl">
-                <span className="text-xl md:text-2xl font-black">
-                  <img src="./images/HC logo.png" alt="" />
-                </span>
-              </div>
-              <div>
-                <h1 className="text-lg md:text-xl font-bold text-slate-900 tracking-tight leading-none">HC Parekh</h1>
-                <p className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider">Project Consultant & Investor</p>
-                <p className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider">Industrial & Corporate</p>
+            <Link to="/">
 
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 md:w-12 md:h-12 text-white flex items-center justify-center rounded-xl">
+                  <span className="text-xl md:text-2xl font-black">
+                    <img src="./images/HC logo.png" alt="" />
+                  </span>
+                </div>
+                <div>
+                  <h1 className="text-lg md:text-xl font-bold text-slate-900 tracking-tight leading-none">HC Parekh</h1>
+                  <p className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider">Project Consultant & Investor</p>
+                  <p className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider">Industrial & Corporate</p>
+
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center gap-4">
