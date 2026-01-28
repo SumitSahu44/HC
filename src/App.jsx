@@ -12,6 +12,7 @@ import OurTeam from './pages/OurTeam';
 import OurHiring from './pages/OurHiring';
 import SocialServices from './pages/SocialServices';
 import PhotoGallery from './pages/PhotoGallery';
+import OurTradeInvitation from './pages/OurTradeInvitation';
 
 
 import ScrollToTop from './components/ScrollToTop';
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/corporate-mou" element={<CorporateMOU />} />
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/our-hiring" element={<OurHiring />} />
+          <Route path="/our-trade-invitation" element={<OurTradeInvitation />} />
           <Route path="/social-services" element={<SocialServices />} />
           <Route path="/photo-gallery" element={<PhotoGallery />} />
 

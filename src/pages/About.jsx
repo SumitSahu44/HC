@@ -42,11 +42,11 @@ const CONTENT = {
                     <div className="p-3 bg-rose-100 text-rose-600 rounded-lg">
                         <BookOpen size={24} />
                     </div>
-                    <h4 className="text-xl font-bold text-slate-800">Formal Education</h4>
+                    <h4 className="text-xl font-bold text-slate-800">Mechanical</h4>
                 </div>
-                <p className="text-lg text-slate-700 leading-relaxed">
+                {/* <p className="text-lg text-slate-700 leading-relaxed">
                     Specialized in <span className="font-bold text-rose-600">Mechanical Engineering</span>.
-                </p>
+                </p> */}
             </div>
         </div>
     ),
@@ -85,7 +85,7 @@ const CONTENT = {
                 {[
                     { title: "Production Consultant", sector: "Textile & Garments" },
                     { title: "General Manager (Business)", sector: "Plastic Industry" },
-                    { title: "Chief Business Officer", sector: "Information & Technology" },
+                    { title: "Chief Business Officer", sector: "Information Technology" },
                     { title: "Trade Consultant", sector: "FMCG" }
                 ].map((role, idx) => (
                     <motion.div
@@ -113,7 +113,7 @@ const CONTENT = {
                     </div>
                     <div>
                         <p className="text-lg text-slate-700 leading-relaxed mb-4">
-                            We take utmost care binding to provide services to our valued Clients with our
+                            We take utmost care, binding to provide services to our valued Clients with our
                             <span className="font-bold text-slate-900"> professional commitments</span>, strictly adhering our set professional ethics, maintaining business and trade secrecy.
                         </p>
                     </div>

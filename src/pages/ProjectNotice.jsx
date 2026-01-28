@@ -19,7 +19,7 @@ export default function ProjectNotice() {
         "Dynamic Website Tutorials",
         "Digital Marketing Tutorials",
         "AI-ML Tutorials",
-        "Annual Maintenance Contract (For Sr. No. 2,4,5)"
+        "Annual Maintenance Contract"
     ];
 
     const locations = [
@@ -124,7 +124,7 @@ export default function ProjectNotice() {
                                 <div className="relative z-10">
                                     <h3 className="text-xl font-bold mb-3">Interested Service Providers</h3>
                                     <p className="text-slate-300 leading-relaxed mb-6">
-                                        Companies (other than OPC) that have prescribed different clear Price-Plans and Service-Plans may contact us “in-person” for a Face-To-Face Meeting at <strong className="text-white">Bhubaneswar / Bengaluru</strong>, with a prior appointment.
+                                        Companies (other than OPC) which have prescribed different clear Price-Plans and Service-Plans may contact us “in-person” for a Face-To-Face Meeting at <strong className="text-white">Bhubaneswar / Bengaluru</strong>, with a prior appointment.
                                     </p>
                                     <Link to="/contact" className="inline-block bg-rose-600 hover:bg-rose-700 text-white px-6 py-2.5 rounded-xl font-semibold transition-colors">
                                         Book Appointment

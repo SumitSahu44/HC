@@ -2,7 +2,7 @@
 import { Zap, TrendingUp, Shield, Globe, Users, FileText } from 'lucide-react';
 
 export const TOP_CATEGORIES = [
-  "TEXTILE", "PULP & PAPERS", "IT SECTOR", "HEALTHCARE", "FMCG"
+  "TEXTILE", "PULP & PAPERS", "INFORMATION TECHNOLOGY", "MEDICAL & HEALTHCARE", "FMCG"
 ];
 
 export const SIDEBAR_LINKS = [
@@ -31,7 +31,7 @@ export const SLIDER_CONTENT = [
   },
   {
     title: "Experience in Industries",
-    subtitle: "Textile, Plastic & Pulp",
+    subtitle: "Textile, Plastic, Pulp & Paper",
     desc: "Experience in Textile Industry, Plastic Manufacturing Industry, and Pulp & Paper Industry."
   },
   {
@@ -54,6 +54,6 @@ export const SERVICES = [
   { title: "Financial Advisory", icon: TrendingUp, desc: "Investment planning and fundraising for large-scale projects." },
   { title: "Legal & Compliance", icon: Shield, desc: "Handling MOUs, Tenders, and Government regulations." },
   { title: "Global Trade", icon: Globe, desc: "Import/Export assistance and international partnership building." },
-  { title: "Manpower Solutions", icon: Users, desc: "Recruiting top-tier talent for corporate leadership roles." },
+  // { title: "Manpower Solutions", icon: Users, desc: "Recruiting top-tier talent for corporate leadership roles." },
   { title: "Tender Management", icon: FileText, desc: "Expert handling of corporate and government tenders." }
 ];

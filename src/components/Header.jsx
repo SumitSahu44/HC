@@ -27,8 +27,8 @@ export default function Header({ toggleSidebar }) {
               <div>
                 <h1 className="text-lg md:text-xl font-bold text-slate-900 tracking-tight leading-none">HC Parekh</h1>
                 <p className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider">Project Consultant & Investor</p>
-               <p className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider">Industrial & Corporate</p>
-                 
+                <p className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider">Industrial & Corporate</p>
+
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@ export default function Header({ toggleSidebar }) {
               <span>Since. 2007</span>
             </div>
             <Link to="/contact" className="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
-              Contact Us <ArrowRight size={14} />
+              Need Project Consultant? <ArrowRight size={14} />
             </Link>
           </div>
         </div>

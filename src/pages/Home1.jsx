@@ -15,7 +15,10 @@ const Preloader = ({ setLoading }) => {
       initial={{ y: 0 }}
       animate={{ y: "-100%" }}
       transition={{ duration: 1, delay: 2.5, ease: [0.76, 0, 0.24, 1] }}
-      onAnimationComplete={() => setLoading(false)}
+      onAnimationComplete={() => {
+        sessionStorage.setItem("preloaderShown", "true");
+        setLoading(false);
+      }}
       className="fixed inset-0 z-[100] bg-slate-950 flex items-center justify-center text-white"
     >
       <motion.div
@@ -40,7 +43,7 @@ const Preloader = ({ setLoading }) => {
             className="h-full bg-rose-600"
           />
         </div>
-        <p className="text-slate-500 text-xs mt-4 font-mono uppercase">Initializing Industrial Protocol...</p>
+        <p className="text-slate-500 text-xs mt-4 font-mono uppercase">Project Consultant</p>
       </motion.div>
     </motion.div>
   );
@@ -48,7 +51,10 @@ const Preloader = ({ setLoading }) => {
 
 export default function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    return !sessionStorage.getItem("preloaderShown");
+  });
+
 
   return (
     <div className="min-h-screen bg-slate-50/50 font-sans text-slate-800 selection:bg-rose-100 selection:text-rose-900">
@@ -76,17 +82,24 @@ export default function App() {
                     <Hero />
 
                   </motion.div>
+                  <div className="p-0 mt-8">
+                    <div className="bg-slate-900 rounded-2xl p-4 text-white relative overflow-hidden">
+                      {/* Background Glow */}
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-rose-500 blur-[40px] opacity-30" />
 
-                    <div className="p-5 mt-auto">
-                            <div className="bg-slate-900 rounded-2xl p-4 text-white relative overflow-hidden">
-                              <div className="absolute top-0 right-0 w-24 h-24 bg-rose-500 blur-[40px] opacity-30" />
-                              <p className="text-xs text-slate-400 mb-1">Need Consultation?</p>
-                              <p className="font-bold text-lg mb-3">+91 98765 43210</p>
-                              <a href="tel:+919876543210" className="w-full bg-white/10 hover:bg-white/20 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors">
-                                <Phone size={14} /> Call Now
-                              </a>
-                            </div>
-                          </div>
+
+                      {/* <p className="text-xs text-slate-400 mb-1">Need Consultation?</p> */}
+                      {/* New Bullet Points Section */}
+                      <ul className="list-disc list-inside text-xs text-slate-300 mb-4 space-y-1 marker:text-rose-500">
+                        <li className="font-bold text-lg mb-2 list-disc list-inside">Implement your own project</li>
+                        <li className="font-bold text-lg mb-2">Contact us for our Projects</li>
+                      </ul>
+
+                      {/* <a href="tel:+919876543210" className="w-full bg-white/10 hover:bg-white/20 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors border border-white/5">
+                        
+                      </a> */}
+                    </div>
+                  </div>
                 </div>
                 <div className="xl:col-span-1 h-full">
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="h-full">
@@ -98,11 +111,11 @@ export default function App() {
               {/* Stats Banner */}
               <section className="bg-slate-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-rose-600 blur-[80px] opacity-20 rounded-full"></div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10 text-center md:text-left">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 relative z-10 text-center md:text-left">
                   {[
                     { label: "Years Exp.", val: "18+" },
-                    { label: "Projects", val: "120+" },
-                    { label: "Awards", val: "15" },
+                    { label: "Projects", val: "75+" },
+                    // { label: "Awards", val: "15" },
                     { label: "Clients", val: "500+" }
                   ].map((stat, i) => (
                     <div key={i}>

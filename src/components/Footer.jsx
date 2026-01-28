@@ -11,8 +11,8 @@ export default function Footer() {
             <p className="text-slate-500 text-sm mt-2">Leading Industrial Consultants Since 2007</p>
           </div>
           <div className="flex gap-8 text-sm font-bold text-slate-600">
-            <Link to="/our-hiring" className="hover:text-rose-600">Our Hiring</Link>
-            <Link to="/corporate-tenders" className="hover:text-rose-600">Our Trade Invitation</Link>
+            {/* <Link to="/our-hiring" className="hover:text-rose-600">Our Hiring</Link> */}
+            <Link to="/our-trade-invitation" className="hover:text-rose-600">Our Trade Invitation</Link>
             <Link to="/social-services" className="hover:text-rose-600">Our Social Services & Donations</Link>
             <Link to="/photo-gallery" className="hover:text-rose-600">Photo Gallery</Link>
           </div>
