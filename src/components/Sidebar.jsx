@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'; // 1. useLocation import kiya
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronRight, Phone } from 'lucide-react';
+import { X, ChevronRight } from 'lucide-react';
 import { SIDEBAR_LINKS } from '../data';
 
 export default function Sidebar({ isOpen, toggle }) {
+  const location = useLocation(); // 2. Current path get karne ke liye
+
   return (
     <>
       {/* Mobile Overlay */}
@@ -28,29 +30,36 @@ export default function Sidebar({ isOpen, toggle }) {
         </div>
 
         <div className="flex-1 overflow-y-auto py-4 px-3 space-y-1">
-          {SIDEBAR_LINKS.map((link, idx) => (
-            <Link
-              key={idx} to={link.href}
-              onClick={toggle}
-              className="flex items-center gap-3 px-4 py-3 text-sm font-medium text-slate-600 hover:text-rose-700 hover:bg-rose-50 rounded-xl transition-all group"
-            >
-              <div className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-rose-600 transition-colors" />
-              {link.label}
-              <ChevronRight size={14} className="ml-auto opacity-0 group-hover:opacity-100 text-rose-400 transition-opacity" />
-            </Link>
-          ))}
-        </div>
+          {SIDEBAR_LINKS.map((link, idx) => {
+            // 3. Check karein ki kya ye link active hai
+            const isActive = location.pathname === link.href;
 
-        {/* <div className="p-5 mt-auto">
-          <div className="bg-slate-900 rounded-2xl p-4 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-rose-500 blur-[40px] opacity-30" />
-            <p className="text-xs text-slate-400 mb-1">Need Consultation?</p>
-            <p className="font-bold text-lg mb-3">+91 98765 43210</p>
-            <a href="tel:+919876543210" className="w-full bg-white/10 hover:bg-white/20 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors">
-              <Phone size={14} /> Call Now
-            </a>
-          </div>
-        </div> */}
+            return (
+              <Link
+                key={idx}
+                to={link.href}
+                onClick={toggle}
+                className={`flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all group ${isActive
+                  ? 'text-rose-700 bg-rose-50' // Active Styles
+                  : 'text-slate-600 hover:text-rose-700 hover:bg-rose-50' // Inactive/Hover Styles
+                  }`}
+              >
+                {/* 4. Dot color change based on active state */}
+                <div className={`w-1.5 h-1.5 rounded-full transition-colors ${isActive ? 'bg-rose-600' : 'bg-slate-300 group-hover:bg-rose-600'
+                  }`} />
+
+                {link.label}
+
+                {/* 5. Arrow icon active state mein hamesha dikhega */}
+                <ChevronRight
+                  size={14}
+                  className={`ml-auto transition-opacity ${isActive ? 'opacity-100 text-rose-600' : 'opacity-0 group-hover:opacity-100 text-rose-400'
+                    }`}
+                />
+              </Link>
+            );
+          })}
+        </div>
       </motion.aside>
     </>
   );
