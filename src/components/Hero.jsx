@@ -35,8 +35,8 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
           >
             {/* Change 2: Reduced margin (mb-4) */}
-            <span className="inline-block py-1 px-2.5 rounded-full bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[10px] md:text-xs font-bold tracking-wider mb-4">
-              {SLIDER_CONTENT[index].title.toUpperCase()}
+            <span className="inline-block py-1 px-2.5 rounded-full bg-rose-600 border border-rose-500/30 text-white text-[10px] md:text-xs font-bold tracking-wider mb-4">
+              {SLIDER_CONTENT[index].title}
             </span>
 
             {/* Change 3: Smaller Heading Text (text-3xl md:text-5xl) and reduced line height */}

@@ -2,7 +2,7 @@
 import { Zap, TrendingUp, Shield, Globe, Users, FileText } from 'lucide-react';
 
 export const TOP_CATEGORIES = [
-  "TEXTILE", "PULP & PAPERS", "INFORMATION TECHNOLOGY", "MEDICAL & HEALTHCARE", "FMCG"
+  "TEXTILE", "PULP & PAPER", "INFORMATION TECHNOLOGY", "MEDICAL & HEALTHCARE", "FMCG"
 ];
 
 export const SIDEBAR_LINKS = [
@@ -20,24 +20,24 @@ export const SIDEBAR_LINKS = [
 
 export const SLIDER_CONTENT = [
   {
-    title: "Experience in Government Sector",
+    title: "Experience in the Government Sector",
     subtitle: "NPCIL & BARC",
-    desc: "Experience in Nuclear Power Corporation of India Ltd and Radiological Laboratory of Bhabha Atomic Research Centre (Govt. of India)."
+    desc: "Experience in Nuclear Power Corporation of India Ltd. and Radiological Laboratory of Bhabha Atomic Research Centre (Govt. of India)."
   },
   {
-    title: "Experience in Healthcare",
+    title: "Experience in the Medical & Healthcare",
     subtitle: "Government Hospital",
-    desc: "Experience in Hospital (Government of India)."
+    desc: "(Government of India Undertaking)."
   },
   {
-    title: "Experience in Industries",
+    title: "Experience in the Manufacturing Industries",
     subtitle: "Textile, Plastic, Pulp & Paper",
-    desc: "Experience in Textile Industry, Plastic Manufacturing Industry and Pulp & Paper Industry."
+    desc: "Production and Procurement"
   },
   {
-    title: "Experience in Technology & FMCG",
+    title: "Experience in the Other Sectors",
     subtitle: "IT & FMCG",
-    desc: "Experience in Information Technology and FMCG."
+    desc: "Services, Production and Procurement."
   }
 ];
 
@@ -55,5 +55,6 @@ export const SERVICES = [
   { title: "Legal & Compliance", icon: Shield, desc: "Handling MOUs, Tenders, and Government regulations." },
   { title: "E-Trade Market", icon: Globe, desc: "Import/Export assistance and international partnership building." },
   // { title: "Manpower Solutions", icon: Users, desc: "Recruiting top-tier talent for corporate leadership roles." },
-  { title: "Tender Management", icon: FileText, desc: "Expert handling of corporate and government tenders." }
+  { title: "Tender Management", icon: FileText, desc: "Expert handling of corporate and government tenders." },
+  { title: "Web Market", icon: Globe, desc: "Expert handling of corporate and government tenders." }
 ];

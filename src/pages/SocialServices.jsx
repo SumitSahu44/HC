@@ -25,7 +25,7 @@ export default function SocialServices() {
                                 <span className="bg-rose-100 text-rose-600 p-2 rounded-lg">
                                     <Heart size={24} />
                                 </span>
-                                <span className="text-rose-600 font-bold tracking-wider text-sm uppercase">Giving Back</span>
+                                <span className="text-rose-600 font-bold tracking-wider text-sm uppercase">CSR Project</span>
                             </div>
                             <h1 className="text-3xl md:text-5xl font-black text-slate-900 mb-4">
                                 OUR SOCIAL SERVICES & DONATIONS
@@ -41,9 +41,9 @@ export default function SocialServices() {
                             {/* Core Statement */}
                             <div className="bg-rose-50 p-8 rounded-2xl border border-rose-100 relative overflow-hidden">
                                 <div className="relative z-10">
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Commitment</h3>
+                                    <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Social Responsibility</h3>
                                     <p className="text-xl leading-relaxed text-slate-700">
-                                        We are glad to donate to the <span className="font-bold text-slate-900">Regd. Social Organizations</span> Which are approved under <span className="font-bold text-slate-900">section 80 (G)</span> of the Income Tax.
+                                        We are glad to donate to the <span className="font-bold text-slate-900">Regd. Social Organizations</span> which are approved under <span className="font-bold text-slate-900">section 80 (G)</span> of the Income Tax Act.
                                     </p>
                                 </div>
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-rose-200 rounded-full blur-3xl opacity-50 -mr-10 -mt-10"></div>
@@ -58,9 +58,9 @@ export default function SocialServices() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 text-lg mb-2">Eligibility Criteria</h4>
                                         <ul className="text-slate-600 list-disc list-inside space-y-2">
-                                            <li>Must be a Registered Social Organization.</li>
-                                            <li>Must satisfy Income Tax Section 80 (G) approval.</li>
-                                            <li>Open to organizations irrespective of location or religion.</li>
+                                            <li>Applicable for the Registered Social Organizations.</li>
+                                            <li>12 (A) and 80 (G) Required. </li>
+                                            <li>Open to all the Indian organizations.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@ export default function SocialServices() {
                                         <h4 className="font-bold text-slate-900 text-lg mb-2">How to Apply</h4>
                                         <p className="text-slate-600 mb-4"> Organizations may contact us with:</p>
                                         <ul className="text-slate-600 list-disc list-inside space-y-2">
-                                            <li>Social Activities Plan</li>
+                                            <li>Social Activities Audited Reports</li>
                                             <li>Detailed Project Proposals</li>
                                         </ul>
                                     </div>

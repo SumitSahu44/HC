@@ -44,7 +44,7 @@ const Preloader = ({ setLoading }) => {
             className="h-full bg-rose-600"
           />
         </div>
-        <p className="text-slate-500 text-lg mt-4 font-mono uppercase">Project Consultant</p>
+        <p className="text-white text-lg text-right mt-4 font-mono">Industrial Project Consultant</p>
       </motion.div>
     </motion.div>
   );

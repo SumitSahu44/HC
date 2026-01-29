@@ -28,7 +28,7 @@ export default function CorporateTenders() {
     ];
 
     const terms = [
-        { label: "Transportation", value: "To be borne by the Company upto Transporters. Local Transport to be borne by the Vendor.", icon: Truck },
+        { label: "Transportation", value: "To be borne by the Company upto Transporters. Local Transport to be borne by the Tailoring Agency.", icon: Truck },
         { label: "Payment Terms", value: "50% Advance with each W.O. | 50% on Inspection and L.R.", icon: Wallet },
     ];
 
