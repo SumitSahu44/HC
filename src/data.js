@@ -45,7 +45,7 @@ export const NOTICES = [
   { text: "New tender released for Textile sector.", urgent: true, date: "Jan 14" },
   { text: "Revised Service Charges for FY 2025-26.", urgent: false, date: "Jan 10" },
   { text: "Annual Corporate meeting scheduled.", urgent: false, date: "Jan 05" },
-  { text: "Project Auction:2015 Certification Renewal.", urgent: false, date: "Dec 28" },
+  { text: "Project Auction:2026 Renewal.", urgent: false, date: "Dec 28" },
   { text: "Read our latest professional ethics guidelines.", urgent: false, date: "Dec 20" }
 ];
 

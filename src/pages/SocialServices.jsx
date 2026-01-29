@@ -58,7 +58,7 @@ export default function SocialServices() {
                                     <div>
                                         <h4 className="font-bold text-slate-900 text-lg mb-2">Eligibility Criteria</h4>
                                         <ul className="text-slate-600 list-disc list-inside space-y-2">
-                                            <li>Applicable for the Registered Social Organizations.</li>
+                                            <li>Applicable for the Regd. Social Organizations.</li>
                                             <li>12 (A) and 80 (G) Required. </li>
                                             <li>Open to all the Indian organizations.</li>
                                         </ul>
