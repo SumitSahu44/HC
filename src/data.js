@@ -46,7 +46,7 @@ export const NOTICES = [
   { text: "Revised Service Charges for FY 2025-26.", urgent: false, date: "Jan 10" },
   { text: "Annual Corporate meeting scheduled.", urgent: false, date: "Jan 05" },
   { text: "Project Auction:2026 Renewal.", urgent: false, date: "Dec 28" },
-  { text: "Read our latest professional ethics guidelines.", urgent: false, date: "Dec 20" }
+  { text: "Refer our Project Manual", urgent: false, date: "Dec 20" }
 ];
 
 export const SERVICES = [
