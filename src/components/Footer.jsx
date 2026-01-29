@@ -8,14 +8,37 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h2 className="text-2xl font-black text-slate-900">HC Parekh</h2>
-            <p className="text-slate-500 text-sm mt-2">Leading Industrial Consultants Since 2007</p>
+            <p className="text-slate-500 text-sm mt-2">Leading Industrial Consultant Since 2007</p>
           </div>
-          <div className="flex gap-8 text-sm font-bold text-slate-600">
-            {/* <Link to="/our-hiring" className="hover:text-rose-600">Our Hiring</Link> */}
-            <Link to="/our-trade-invitation" className="hover:text-rose-600">Our Trade Invitation</Link>
-            <Link to="/social-services" className="hover:text-rose-600">Our Social Services & Donations</Link>
-            <Link to="/photo-gallery" className="hover:text-rose-600">Photo Gallery</Link>
+          <div className="flex gap-4 text-sm font-bold text-slate-600 
+                flex-col sm:flex-row sm:gap-8">
+
+            <Link
+              to="/our-trade-invitation"
+              className="bg-[#a01720] px-4 py-2 rounded text-white 
+               hover:bg-[#7f1219] transition duration-300 text-center"
+            >
+              Our Trade Invitation
+            </Link>
+
+            <Link
+              to="/social-services"
+              className="bg-[#a01720] px-4 py-2 rounded text-white 
+               hover:bg-[#7f1219] transition duration-300 text-center"
+            >
+              Our Social Services & Donations
+            </Link>
+
+            <Link
+              to="/photo-gallery"
+              className="bg-[#a01720] px-4 py-2 rounded text-white 
+               hover:bg-[#7f1219] transition duration-300 text-center"
+            >
+              Photo Gallery
+            </Link>
+
           </div>
+
         </div>
         <div className="border-t border-slate-100 mt-8 pt-8 text-center text-xs text-slate-400 font-medium">
           © 2026 HC Parekh & Associates. All rights reserved.

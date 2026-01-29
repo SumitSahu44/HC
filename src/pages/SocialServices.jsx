@@ -43,7 +43,7 @@ export default function SocialServices() {
                                 <div className="relative z-10">
                                     <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Commitment</h3>
                                     <p className="text-xl leading-relaxed text-slate-700">
-                                        We are glad to donate to the <span className="font-bold text-slate-900">Regd. Social Organizations</span> who are approved under <span className="font-bold text-slate-900">section 80 (G)</span> of the Income Tax.
+                                        We are glad to donate to the <span className="font-bold text-slate-900">Regd. Social Organizations</span> Which are approved under <span className="font-bold text-slate-900">section 80 (G)</span> of the Income Tax.
                                     </p>
                                 </div>
                                 <div className="absolute top-0 right-0 w-40 h-40 bg-rose-200 rounded-full blur-3xl opacity-50 -mr-10 -mt-10"></div>

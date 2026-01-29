@@ -32,7 +32,7 @@ export const SLIDER_CONTENT = [
   {
     title: "Experience in Industries",
     subtitle: "Textile, Plastic, Pulp & Paper",
-    desc: "Experience in Textile Industry, Plastic Manufacturing Industry, and Pulp & Paper Industry."
+    desc: "Experience in Textile Industry, Plastic Manufacturing Industry and Pulp & Paper Industry."
   },
   {
     title: "Experience in Technology & FMCG",
@@ -43,17 +43,17 @@ export const SLIDER_CONTENT = [
 
 export const NOTICES = [
   { text: "New tender released for Textile sector.", urgent: true, date: "Jan 14" },
-  { text: "Updated service charges from April 2026.", urgent: false, date: "Jan 10" },
+  { text: "Revised Service Charges for FY 2025-26.", urgent: false, date: "Jan 10" },
   { text: "Annual Corporate meeting scheduled.", urgent: false, date: "Jan 05" },
-  { text: "ISO 9001:2015 Certification Renewal.", urgent: false, date: "Dec 28" },
+  { text: "Project Auction:2015 Certification Renewal.", urgent: false, date: "Dec 28" },
   { text: "Read our latest professional ethics guidelines.", urgent: false, date: "Dec 20" }
 ];
 
 export const SERVICES = [
   { title: "Project Consultation", icon: Zap, desc: "Complete roadmap from idea to execution for industrial setups." },
-  { title: "Financial Advisory", icon: TrendingUp, desc: "Investment planning and fundraising for large-scale projects." },
+  { title: "Market Advisory", icon: TrendingUp, desc: "Investment planning and fundraising for large-scale projects." },
   { title: "Legal & Compliance", icon: Shield, desc: "Handling MOUs, Tenders, and Government regulations." },
-  { title: "Global Trade", icon: Globe, desc: "Import/Export assistance and international partnership building." },
+  { title: "E-Trade Market", icon: Globe, desc: "Import/Export assistance and international partnership building." },
   // { title: "Manpower Solutions", icon: Users, desc: "Recruiting top-tier talent for corporate leadership roles." },
   { title: "Tender Management", icon: FileText, desc: "Expert handling of corporate and government tenders." }
 ];
