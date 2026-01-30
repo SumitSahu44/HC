@@ -42,7 +42,7 @@ export const SLIDER_CONTENT = [
 ];
 
 export const NOTICES = [
-  { text: "New tender released for Textile sector.", urgent: true, date: "Jan 14" },
+  { text: "New Tender released for Textile sector.", urgent: true, date: "Jan 14" },
   { text: "Revised Service Charges for FY 2025-26.", urgent: false, date: "Jan 10" },
   { text: "Annual Corporate Meeting Scheduled.", urgent: false, date: "Jan 05" },
   { text: "Project Auction FY 2025-26.", urgent: false, date: "Dec 28" },
