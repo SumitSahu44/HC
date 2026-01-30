@@ -50,14 +50,14 @@ export default function Sidebar({ isOpen, toggle }) {
                 to={link.href}
                 onClick={toggle}
                 className={`flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all group
-                ${isActive
+        ${isActive
                     ? 'text-rose-700 bg-rose-50'
                     : 'text-slate-600 hover:text-rose-700 hover:bg-rose-50'
                   }`}
               >
                 <div
                   className={`w-1.5 h-1.5 rounded-full transition-colors
-                  ${isActive
+          ${isActive
                       ? 'bg-rose-600'
                       : 'bg-slate-300 group-hover:bg-rose-600'
                     }`}
@@ -68,7 +68,7 @@ export default function Sidebar({ isOpen, toggle }) {
                 <ChevronRight
                   size={14}
                   className={`ml-auto transition-opacity
-                  ${isActive
+          ${isActive
                       ? 'opacity-100 text-rose-600'
                       : 'opacity-0 group-hover:opacity-100 text-rose-400'
                     }`}
@@ -76,24 +76,22 @@ export default function Sidebar({ isOpen, toggle }) {
               </Link>
             );
           })}
-        </div>
 
-        {/* 🔥 Bottom CTA */}
-        {/* 🔥 Bottom CTA – ONLY MOBILE */}
-        {/* 🔥 Mobile CTA – below last link, not sticky */}
-        <div className="px-3 pt-6 pb-4 lg:hidden relative z-10">
-          <Link
-            to="/contact"
-            onClick={toggle}
-            className="flex items-center justify-center gap-2
-    bg-slate-900 hover:bg-slate-800
-    text-white px-4 py-3 rounded-xl
-    text-sm font-semibold
-    transition-all shadow-md hover:shadow-lg"
-          >
-            Need Project Consultant?
-            <ArrowRight size={14} />
-          </Link>
+          {/* 🔥 CTA – Links ke turant baad */}
+          <div className="pt-4 lg:hidden">
+            <Link
+              to="/contact"
+              onClick={toggle}
+              className="flex items-center justify-center gap-2
+        bg-slate-900 hover:bg-slate-800
+        text-white px-4 py-3 rounded-xl
+        text-sm font-semibold
+        transition-all shadow-md hover:shadow-lg"
+            >
+              Need Project Consultant?
+              <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
 
       </motion.aside>
