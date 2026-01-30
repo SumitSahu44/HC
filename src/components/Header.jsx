@@ -11,7 +11,7 @@ export default function Header({ toggleSidebar }) {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm"
+        className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm"
       >
         <div className="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
           <div className="flex items-center gap-4">

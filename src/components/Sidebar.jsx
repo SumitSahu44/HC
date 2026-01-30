@@ -24,7 +24,7 @@ export default function Sidebar({ isOpen, toggle }) {
 
       {/* Sidebar */}
       <motion.aside
-        className={`fixed lg:sticky top-0 lg:top-32 inset-y-0 left-0 z-50 w-72 
+        className={`fixed lg:sticky top-0 lg:top-32 inset-y-0 left-0 z-40 w-72 
         bg-white border-r border-slate-100 shadow-2xl lg:shadow-none
         transform transition-transform duration-300 ease-in-out
         h-screen lg:h-[calc(100vh-140px)]
@@ -80,7 +80,8 @@ export default function Sidebar({ isOpen, toggle }) {
 
         {/* 🔥 Bottom CTA */}
         {/* 🔥 Bottom CTA – ONLY MOBILE */}
-        <div className="p-4 border-t border-slate-100 lg:hidden">
+        {/* 🔥 Mobile CTA – below last link, not sticky */}
+        <div className="px-3 pt-6 pb-4 lg:hidden relative z-10">
           <Link
             to="/contact"
             onClick={toggle}
@@ -88,7 +89,7 @@ export default function Sidebar({ isOpen, toggle }) {
     bg-slate-900 hover:bg-slate-800
     text-white px-4 py-3 rounded-xl
     text-sm font-semibold
-    transition-all shadow-lg hover:shadow-xl"
+    transition-all shadow-md hover:shadow-lg"
           >
             Need Project Consultant?
             <ArrowRight size={14} />
