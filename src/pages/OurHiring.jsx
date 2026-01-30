@@ -122,7 +122,7 @@ export default function OurHiring() {
                                             href="mailto:hemant.parekh2012@gmail.com"
                                             className="font-mono font-bold text-sm sm:text-lg break-all sm:break-normal hover:text-purple-600 transition-colors"
                                         >
-                                            hemant.parekh2012@gmail.com
+                                            hemant.parekh2012@<br></br>gmail.com
                                         </a>
 
                                     </div>
@@ -148,8 +148,8 @@ export default function OurHiring() {
                         </div>
                     </div>
                 </main>
-            </div>
+            </div >
             <Footer />
-        </div>
+        </div >
     );
 }
