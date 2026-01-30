@@ -25,7 +25,7 @@ const LOCATIONS = [
 
 const CONTACT_EMAILS = [
     { type: "Appointment", email: "appointment@hcparekh.com" },
-    { type: "Start Service", email: "services@hcparekh.com" }
+    { type: "Project Services", email: "services@hcparekh.com" }
 ];
 
 export default function Contact() {
