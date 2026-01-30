@@ -33,7 +33,7 @@ export default function OurHiring() {
                 <Sidebar isOpen={isSidebarOpen} toggle={() => setSidebarOpen(false)} />
 
                 <main className="flex-1 min-w-0 bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
-                    <div className="p-8 md:p-12">
+                    <div className="p-6 md:p-12">
 
                         {/* Header Section */}
                         <div className="border-b border-slate-200 pb-8 mb-8">
@@ -104,7 +104,7 @@ export default function OurHiring() {
                                         Interested Influencers may submit their clear <strong>Quotation</strong> for each platform for each advertisement with its live duration, along with their number of connections/followers.
                                     </p>
 
-                                    <div className="bg-white/10 p-6 rounded-xl border border-white/10 mb-6">
+                                    <div className="bg-white/10 p-5 rounded-xl border border-white/10 mb-6">
                                         <ul className="space-y-2 text-sm text-slate-300">
                                             <li className="flex gap-2"><span className="text-purple-400">•</span> Quotation must be in PDF format.</li>
                                             <li className="flex gap-2"><span className="text-purple-400">•</span> Excludes 3rd Party & GST.</li>
@@ -112,10 +112,21 @@ export default function OurHiring() {
                                         </ul>
                                     </div>
 
-                                    <div className="flex flex-col md:flex-row items-center gap-4 bg-white text-slate-900 p-4 rounded-xl">
-                                        <span className="font-bold text-sm uppercase tracking-wider text-slate-500">Send To:</span>
-                                        <a href="mailto:hemant.parekh2012@gmail.com" className="font-mono font-bold text-lg hover:text-purple-600 transition-colors">hemant.parekh2012@gmail.com</a>
+                                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 bg-white text-slate-900 p-4 rounded-xl w-full">
+
+                                        <span className="font-bold text-xs sm:text-sm uppercase tracking-wider text-slate-500">
+                                            Send To:
+                                        </span>
+
+                                        <a
+                                            href="mailto:hemant.parekh2012@gmail.com"
+                                            className="font-mono font-bold text-sm sm:text-lg break-all sm:break-normal hover:text-purple-600 transition-colors"
+                                        >
+                                            hemant.parekh2012@gmail.com
+                                        </a>
+
                                     </div>
+
                                 </div>
 
                                 {/* Doodles */}
