@@ -31,7 +31,7 @@ export default function ProjectMarquee() {
                             to="/contact"
                             className="flex items-center gap-4 text-2xl md:text-3xl font-extrabold text-white hover:text-rose-400 transition-colors tracking-tight"
                         >
-                            <span className="h-3 w-3 rounded-full bg-slate-500" /> {/* Marker dot */}
+                            <span className="h-3 w-3 rounded-full bg-rose-500" /> {/* Marker dot */}
                             Contact us for our Project
                         </Link>
                     </div>
