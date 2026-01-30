@@ -45,7 +45,7 @@ export default function Hero() {
             </h2>
 
             {/* Change 4: Smaller Description Text (text-sm md:text-base) and reduced margin */}
-            <p className="text-sm md:text-base text-slate-300 mb-6 max-w-lg leading-relaxed line-clamp-2 md:line-clamp-none">
+            <p className="text-sm md:text-base text-slate-300 mb-6 max-w-lg leading-relaxed  md:line-clamp-none">
               {SLIDER_CONTENT[index].desc}
             </p>
 

@@ -24,7 +24,7 @@ export default function ProjectMarquee() {
                     <div key={i} className="flex items-center gap-12 px-6">
                         <span className="flex items-center gap-4 text-2xl md:text-3xl font-extrabold text-white tracking-tight">
                             <span className="h-3 w-3 rounded-full bg-rose-500" /> {/* Marker dot */}
-                            Implement your own project
+                            Implement your own Project
                         </span>
 
                         <Link
@@ -32,7 +32,7 @@ export default function ProjectMarquee() {
                             className="flex items-center gap-4 text-2xl md:text-3xl font-extrabold text-white hover:text-rose-400 transition-colors tracking-tight"
                         >
                             <span className="h-3 w-3 rounded-full bg-slate-500" /> {/* Marker dot */}
-                            Contact us for our Projects
+                            Contact us for our Project
                         </Link>
                     </div>
                 ))}
