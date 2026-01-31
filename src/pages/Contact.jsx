@@ -134,7 +134,7 @@ export default function Contact() {
                         <div className="relative z-10">
                             <h1 className="text-3xl md:text-5xl font-black mb-4">Get in Touch</h1>
                             <p className="text-slate-400 text-lg max-w-2xl">
-                                We are here to assist you with your industrial consultation needs. Reach out to us for appointments or service inquiries.
+                                We are here to assist you with your industrial consultation needs. Reach out to us for appointments or service Enquiry.
                             </p>
                         </div>
                     </div>
