@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone, Send, Clock, Globe } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MapPin, Mail, Send, Loader2, CheckCircle2, XCircle, X } from 'lucide-react';
 
 const LOCATIONS = [
     {
@@ -28,15 +28,83 @@ const CONTACT_EMAILS = [
     { type: "Project Services", email: "services@hcparekh.com" }
 ];
 
+// Success/Error Modal Component
+const StatusModal = ({ isOpen, type, message, onClose }) => (
+    <AnimatePresence>
+        {isOpen && (
+            <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                    className="bg-white rounded-3xl p-8 max-w-sm w-full shadow-2xl text-center relative"
+                >
+                    <button onClick={onClose} className="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                        <X size={20} />
+                    </button>
+
+                    <div className="mb-4 flex justify-center">
+                        {type === 'success' ? (
+                            <div className="bg-green-100 p-3 rounded-full text-green-600">
+                                <CheckCircle2 size={40} />
+                            </div>
+                        ) : (
+                            <div className="bg-red-100 p-3 rounded-full text-red-600">
+                                <XCircle size={40} />
+                            </div>
+                        )}
+                    </div>
+
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                        {type === 'success' ? 'Thank You!' : 'Submission Failed'}
+                    </h3>
+                    <p className="text-slate-600 mb-6">{message}</p>
+
+                    <button
+                        onClick={onClose}
+                        className={`w-full py-3 rounded-xl font-bold text-white transition-all ${type === 'success' ? 'bg-green-600 hover:bg-green-700' : 'bg-red-600 hover:bg-red-700'
+                            }`}
+                    >
+                        Close
+                    </button>
+                </motion.div>
+            </div>
+        )}
+    </AnimatePresence>
+);
+
 export default function Contact() {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
 
-    const handleSubmit = (e) => {
+    // Modal State
+    const [modal, setModal] = useState({ isOpen: false, type: 'success', message: '' });
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // In a real app, you would send this data to a backend
-        alert("Thank you for your message. We will contact you shortly.");
-        setFormState({ name: '', email: '', subject: '', message: '' });
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch('/php/send_email.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formState),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setModal({ isOpen: true, type: 'success', message: result.message });
+                setFormState({ name: '', email: '', subject: '', message: '' });
+            } else {
+                setModal({ isOpen: true, type: 'error', message: result.message });
+            }
+        } catch (error) {
+            setModal({ isOpen: true, type: 'error', message: "Connection error. Please check your internet or server." });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (e) => {
@@ -45,12 +113,20 @@ export default function Contact() {
 
     return (
         <div className="min-h-screen bg-slate-50/50 font-sans text-slate-800">
+            {/* Pop-up Modal */}
+            <StatusModal
+                isOpen={modal.isOpen}
+                type={modal.type}
+                message={modal.message}
+                onClose={() => setModal({ ...modal, isOpen: false })}
+            />
+
             <Header toggleSidebar={() => setSidebarOpen(!isSidebarOpen)} />
 
             <div className="container mx-auto flex gap-8 py-6 px-3 md:px-6 relative items-start">
                 <Sidebar isOpen={isSidebarOpen} toggle={() => setSidebarOpen(false)} />
 
-                <main className="flex-1 min-w-0 bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden relative">
+                <main className="flex-1 min-w-0 bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden relative mb-10">
 
                     {/* Header Banner */}
                     <div className="bg-slate-900 text-white p-8 md:p-12 relative overflow-hidden">
@@ -67,7 +143,6 @@ export default function Contact() {
 
                         {/* Left Column: Contact Info */}
                         <div className="space-y-10">
-
                             {/* Locations */}
                             <div>
                                 <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2 mb-6">
@@ -115,7 +190,6 @@ export default function Contact() {
                                     </p>
                                 </div>
                             </div>
-
                         </div>
 
                         {/* Right Column: Contact Form */}
@@ -127,24 +201,18 @@ export default function Contact() {
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-slate-700">Your Name</label>
                                         <input
-                                            type="text"
-                                            name="name"
-                                            required
-                                            value={formState.name}
-                                            onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all"
+                                            type="text" name="name" required disabled={isSubmitting}
+                                            value={formState.name} onChange={handleChange}
+                                            className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all disabled:opacity-50"
                                             placeholder="John Doe"
                                         />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-semibold text-slate-700">Email Address</label>
                                         <input
-                                            type="email"
-                                            name="email"
-                                            required
-                                            value={formState.email}
-                                            onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all"
+                                            type="email" name="email" required disabled={isSubmitting}
+                                            value={formState.email} onChange={handleChange}
+                                            className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all disabled:opacity-50"
                                             placeholder="john@example.com"
                                         />
                                     </div>
@@ -153,10 +221,9 @@ export default function Contact() {
                                 <div className="space-y-2">
                                     <label className="text-sm font-semibold text-slate-700">Subject</label>
                                     <select
-                                        name="subject"
-                                        value={formState.subject}
-                                        onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all"
+                                        name="subject" required disabled={isSubmitting}
+                                        value={formState.subject} onChange={handleChange}
+                                        className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all disabled:opacity-50"
                                     >
                                         <option value="">Select a Topic</option>
                                         <option value="appointment">Request Appointment</option>
@@ -169,46 +236,65 @@ export default function Contact() {
                                 <div className="space-y-2">
                                     <label className="text-sm font-semibold text-slate-700">Message</label>
                                     <textarea
-                                        name="message"
-                                        required
-                                        value={formState.message}
-                                        onChange={handleChange}
+                                        name="message" required disabled={isSubmitting}
+                                        value={formState.message} onChange={handleChange}
                                         rows={4}
-                                        className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all resize-none"
+                                        className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all resize-none disabled:opacity-50"
                                         placeholder="How can we help you?"
                                     />
                                 </div>
 
                                 <button
-                                    type="submit"
-                                    className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 group"
+                                    type="submit" disabled={isSubmitting}
+                                    className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 group disabled:bg-slate-400"
                                 >
-                                    Send Message
-                                    <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                                    {isSubmitting ? (
+                                        <>
+                                            <Loader2 className="animate-spin" size={18} />
+                                            Submitting...
+                                        </>
+                                    ) : (
+                                        <>
+                                            Send Message
+                                            <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                                        </>
+                                    )}
                                 </button>
                             </form>
                         </div>
-
                     </div>
 
                     {/* Map Section */}
+
                     <div className="w-full h-[400px] border-t border-slate-100">
+
                         <iframe
+
                             title="Location Map"
+
                             width="100%"
+
                             height="100%"
+
                             frameBorder="0"
+
                             scrolling="no"
+
                             marginHeight="0"
+
                             marginWidth="0"
+
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3115.3860579281427!2d85.8023868!3d20.204274299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a6665f625d33%3A0x969a2371bea26c6a!2sHi-tech%20Plaza%20Rd%2C%20Bhubaneswar%2C%20Odisha%20751002!5e1!3m2!1sen!2sin!4v1769839336871!5m2!1sen!2sin"
+
                             className="w-full h-full"
+
                         ></iframe>
+
                     </div>
+
 
                 </main>
             </div>
-
             <Footer />
         </div>
     );
