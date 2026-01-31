@@ -47,7 +47,7 @@ export default function Contact() {
         <div className="min-h-screen bg-slate-50/50 font-sans text-slate-800">
             <Header toggleSidebar={() => setSidebarOpen(!isSidebarOpen)} />
 
-            <div className="container mx-auto flex gap-8 py-6 px-4 md:px-6 relative items-start">
+            <div className="container mx-auto flex gap-8 py-6 px-3 md:px-6 relative items-start">
                 <Sidebar isOpen={isSidebarOpen} toggle={() => setSidebarOpen(false)} />
 
                 <main className="flex-1 min-w-0 bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden relative">
@@ -63,7 +63,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <div className="p-8 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div className="p-4 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
 
                         {/* Left Column: Contact Info */}
                         <div className="space-y-10">
@@ -99,7 +99,7 @@ export default function Contact() {
                                         <a
                                             key={idx}
                                             href={`mailto:${contact.email}`}
-                                            className="flex items-center gap-4 p-5 rounded-xl border border-slate-100 bg-rose-50/50 hover:bg-rose-50 transition-colors group"
+                                            className="flex items-center gap-2 md:gap-4 p-5 px-2 rounded-xl border border-slate-100 bg-rose-50/50 hover:bg-rose-50 transition-colors group"
                                         >
                                             <div className="p-3 bg-white text-rose-600 rounded-full shadow-sm group-hover:scale-110 transition-transform">
                                                 <Mail size={20} />
@@ -189,6 +189,21 @@ export default function Contact() {
                             </form>
                         </div>
 
+                    </div>
+
+                    {/* Map Section */}
+                    <div className="w-full h-[400px] border-t border-slate-100">
+                        <iframe
+                            title="Location Map"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            scrolling="no"
+                            marginHeight="0"
+                            marginWidth="0"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3115.3860579281427!2d85.8023868!3d20.204274299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a6665f625d33%3A0x969a2371bea26c6a!2sHi-tech%20Plaza%20Rd%2C%20Bhubaneswar%2C%20Odisha%20751002!5e1!3m2!1sen!2sin!4v1769839336871!5m2!1sen!2sin"
+                            className="w-full h-full"
+                        ></iframe>
                     </div>
 
                 </main>

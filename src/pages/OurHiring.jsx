@@ -18,22 +18,28 @@ export default function OurHiring() {
     ];
 
     const platforms = [
-        { name: "LinkedIn", icon: Linkedin, color: "text-blue-700" },
+        {
+            name: "LinkedIn",
+            icon: Linkedin,
+            color: "text-blue-700",
+            link: "https://www.linkedin.com/in/hc-parekh-32a42337b"
+        },
         { name: "Facebook", icon: Facebook, color: "text-blue-600" },
         { name: "Instagram", icon: Instagram, color: "text-pink-600" },
         { name: "Youtube", icon: Youtube, color: "text-red-600" },
         { name: "Other Platforms", icon: Megaphone, color: "text-slate-600" }
     ];
 
+
     return (
         <div className="min-h-screen bg-slate-50/50 font-sans text-slate-800">
             <Header toggleSidebar={() => setSidebarOpen(!isSidebarOpen)} />
 
-            <div className="container mx-auto flex gap-8 py-6 px-4 md:px-6 relative items-start">
+            <div className="container mx-auto flex gap-8 py-6 px-3 md:px-6 relative items-start">
                 <Sidebar isOpen={isSidebarOpen} toggle={() => setSidebarOpen(false)} />
 
                 <main className="flex-1 min-w-0 bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
-                    <div className="p-6 md:p-12">
+                    <div className="p-3 md:p-12">
 
                         {/* Header Section */}
                         <div className="border-b border-slate-200 pb-8 mb-8">
@@ -85,17 +91,24 @@ export default function OurHiring() {
                                     <p className="text-sm text-slate-500 mb-4">Good connections / followers / subscribers required on:</p>
                                     <div className="grid grid-cols-2 gap-3">
                                         {platforms.map((p, idx) => (
-                                            <div key={idx} className="flex items-center gap-2 bg-white p-3 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+                                            <a
+                                                key={idx}
+                                                href={p.link || "#"}
+                                                target={p.link ? "_blank" : "_self"}
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 bg-white p-3 rounded-xl border border-slate-100 hover:shadow-md transition-shadow"
+                                            >
                                                 <p.icon size={20} className={p.color} />
                                                 <span className="font-semibold text-slate-700">{p.name}</span>
-                                            </div>
+                                            </a>
                                         ))}
+
                                     </div>
                                 </div>
                             </div>
 
                             {/* Application Process */}
-                            <div className="bg-slate-900 text-white p-8 rounded-2xl relative overflow-hidden">
+                            <div className="bg-slate-900 text-white py-6 px-4 md:p-8 rounded-2xl relative overflow-hidden">
                                 <div className="relative z-10">
                                     <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
                                         <Mail className="text-purple-400" /> Submission Details
@@ -122,7 +135,7 @@ export default function OurHiring() {
                                             href="mailto:hemant.parekh2012@gmail.com"
                                             className="font-mono font-bold text-sm sm:text-lg break-all sm:break-normal hover:text-purple-600 transition-colors"
                                         >
-                                            hemant.parekh2012@<br></br>gmail.com
+                                            hemant.parekh2012@gmail.com
                                         </a>
 
                                     </div>
