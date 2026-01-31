@@ -22,7 +22,7 @@ export default function OurHiring() {
             name: "LinkedIn",
             icon: Linkedin,
             color: "text-blue-700",
-            link: "https://www.linkedin.com/in/hc-parekh-32a42337b"
+            link: ""
         },
         { name: "Facebook", icon: Facebook, color: "text-blue-600" },
         { name: "Instagram", icon: Instagram, color: "text-pink-600" },

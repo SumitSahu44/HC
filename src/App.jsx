@@ -16,14 +16,14 @@ import OurTradeInvitation from './pages/OurTradeInvitation';
 
 
 import ScrollToTop from './components/ScrollToTop';
-
+import LinkedInFloat from "./components/LinkedInFloat";
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <div className="relative">
 
-
+        <LinkedInFloat />
         <Routes>
           <Route path="/" element={<HomeV1 />} />
           <Route path="/about" element={<About />} />
